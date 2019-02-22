@@ -1,0 +1,15 @@
+ {
+  "name": "{{ name }}",
+  "access_token": "{{ token }}",
+  "items": [
+    {% for sku, quantity in skus %}
+      {
+      "sku": "{{ sku }}",
+      "quantity": "{{ quantity }}"
+      },
+    {%  endfor %}
+  ],
+  "client_id": "{{ client_id }}",
+  "client_secret": "{{ client_secret }}",
+  "group_id": {{ group_id }}
+}
